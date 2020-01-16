@@ -1,0 +1,193 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.17763}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9                                                                       Default Values\par
+*It's not always necessary to assign a value when a field is declared. Fields that are declared but not initialized will be set to a reasonable default by the compiler. Generally speaking, this default will be zero or null, depending on the data type. Relying on such default values, however, is generally considered bad programming style.\par
+The following chart summarizes the default values for the above data types.\par
+Data Type\tab Default Value (for fields)\par
+byte\tab 0\par
+short\tab 0\par
+int\tab 0\par
+long\tab 0L\par
+float\tab 0.0f\par
+double\tab 0.0d\par
+char\tab '\\u0000'\par
+String (or any object)  \tab null\par
+boolean\tab false\par
+*Local variables are slightly different; the compiler never assigns a default value to an uninitialized local variable. If you cannot initialize your local variable where it is declared, make sure to assign it a value before you attempt to use it. Accessing an uninitialized local variable will result in a compile-time error.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Use float or double?\par
+{\pntext\f2\'B7\tab}The precision of a floating point value indicates how many digits the value can have after the decimal point. The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits. Therefore it is safer to use double for most calculations.\par
+
+\pard\sa200\sl276\slmult1                                                                   The Java new keyword \par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 The Java new keyword is used to create an instance of the class. In other words, it instantiates a class by allocating memory for a new object and returning a reference to that memory. We can also use the new keyword to create the array object.\par
+
+\pard\sa200\sl276\slmult1                 Points to remember\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 It is used to create the object.\par
+{\pntext\f2\'B7\tab}It allocates the memory at runtime.\par
+{\pntext\f2\'B7\tab}All objects occupy memory in the heap area.\par
+{\pntext\f2\'B7\tab}It invokes the object constructor.\par
+{\pntext\f2\'B7\tab}It requires a single, postfix argument to call the constructor\par
+
+\pard\sa200\sl276\slmult1                                                                      Special For String\par
+\\b (backspace), \\t (tab), \\n (line feed), \\f (form feed), \\r (carriage return), \\" (double quote), \\' (single quote), and \\\\ (backslash).\par
+
+\pard\sa200\sl276\slmult1\qc Abstract class in Java\par
+
+\pard\sa200\sl276\slmult1 A class which is declared as abstract is known as an abstract class. It can have abstract and non-abstract methods. It needs to be extended and its method implemented. It cannot be instantiated.\par
+\par
+Points to Remember\par
+An abstract class must be declared with an abstract keyword.\par
+It can have abstract and non-abstract methods.\par
+It cannot be instantiated.\par
+It can have constructors and static methods also.\par
+It can have final methods which will force the subclass not to change the body of the method.\par
+Rule: If there is an abstract method in a class, that class must be abstract.\par
+Rule: If you are extending an abstract class that has an abstract method, you must either provide the implementation of the method or make this class abstract.\par
+
+\pard\sa200\sl276\slmult1\qc     INTERFACE\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\qc In other words, Interface fields are public, static and final by default, and the methods are public and abstract.\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Since Java 8, we can have default and static methods in an interface.\par
+{\pntext\f2\'B7\tab}Since Java 9, we can have private methods in an interface.\par
+
+\pard\sa200\sl276\slmult1                  \par
+     When we extend an interface that contains a default method, we can perform following,\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Not override the default method and will inherit the default method.\par
+{\pntext\f2\'B7\tab}Override the default method similar to other methods we override in subclass..\par
+{\pntext\f2\'B7\tab}Redeclare default method as abstract, which force subclass to override it\par
+
+\pard\sa200\sl276\slmult1\par
+When the supertypes of a class or interface provide multiple default methods with the same signature:\par
+\par
+Instance methods are preferred over interface default methods.\par
+Methods that are already overridden by other candidates are ignored. This circumstance can arise when supertypes share a common ancestor.\par
+
+\pard\sa200\sl276\slmult1\qc Java OR Operator Example: Logical || and Bitwise |\par
+
+\pard\sa200\sl276\slmult1 The logical || operator doesn't check second condition if first condition is true. It checks second condition only if first one is false.The bitwise | operator always checks both conditions whether first condition is true or false.\par
+
+\pard\sa200\sl276\slmult1\qc Java AND Operator Example: Logical && and Bitwise &\par
+
+\pard\sa200\sl276\slmult1 The logical && operator doesn't check second condition if first condition is false. It checks second condition only if first one is true.The bitwise & operator always checks both conditions whether first condition is true or false.\par
+                                                                Instance variable in Java\par
+A variable which is created inside the class but outside the method is known as an instance variable. Instance variable doesn't get memory at compile time. It gets memory at runtime when an object or instance is created. That is why it is known as an instance variable.\par
+                                                                New keyword in Java\par
+The new keyword is used to allocate memory at runtime. All objects get memory in Heap memory area.\par
+\par
+                                      Object and Class Example: main within the class\par
+In this example, we have created a Student class which has two data members id and name. We are creating the object of the Student class by new keyword and printing the object's value.\par
+\par
+As you can see in the above figure, object gets the memory in heap memory area. The reference variable refers to the object allocated in the heap memory area. Here, s1 and s2 both are reference variables that refer to the objects allocated in memory.\par
+refer: {{\field{\*\fldinst{HYPERLINK https://www.javatpoint.com/object-and-class-in-java }}{\fldrslt{https://www.javatpoint.com/object-and-class-in-java\ul0\cf0}}}}\f0\fs22\par
+                                                       Anonymous object\par
+Anonymous simply means nameless. An object which has no reference is known as an anonymous object. It can be used at the time of object creation only.\par
+\par
+If you have to use an object only once, an anonymous object is a good approach. For example:\par
+\par
+new Calculation();//anonymous object  \par
+\fs36 What are the different ways to create an object in Java?\par
+\fs22 There are many ways to create an object in java. They are:\par
+\par
+By new keyword\par
+By newInstance() method\par
+By clone() method\par
+By deserialization\par
+By factory method etc.\par
+We will learn these ways to create object later.\par
+
+\pard\sa200\sl276\slmult1\qc\fs36 Creating multiple objects by one type only\par
+
+\pard\sa200\sl276\slmult1\fs22 We can create multiple objects by one type only as we do in case of primitives.\par
+\par
+Initialization of primitive variables:\par
+\par
+int a=10, b=20;  \par
+Initialization of refernce variables:\par
+\par
+Rectangle r1=new Rectangle(), r2=new Rectangle();//creating two objects  \par
+
+\pard\sa200\sl276\slmult1\qc\fs36 Java static keyword\par
+
+\pard\sa200\sl276\slmult1\fs22 Static variable\par
+Program of the counter without static variable\par
+Program of the counter with static variable\par
+Static method\par
+Restrictions for the static method\par
+Why is the main method static?\par
+Static block\par
+Can we execute a program without main method?\par
+The static keyword in Java is used for memory management mainly. We can apply java static keyword with variables, methods, blocks and nested class. The static keyword belongs to the class than an instance of the class.\par
+\par
+The static can be:\par
+\par
+Variable (also known as a class variable)\par
+Method (also known as a class method)\par
+Block\par
+Nested class\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs36 Restrictions for the static method\b0\fs22\par
+
+\pard\sa200\sl276\slmult1 There are two main restrictions for the static method. They are:\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 The static method can not use non static data member or call non-static method directly.\par
+
+\pard\sa200\sl276\slmult1 this and super cannot be used in static context.\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs36 Unary \ldblquote ~\rdblquote  operator - What exactly is happening here?\par
+
+\pard\sa200\sl276\slmult1 {\b0\fs22{\field{\*\fldinst{HYPERLINK https://stackoverflow.com/questions/13535947/unary-operator-what-exactly-is-happening-here }}{\fldrslt{https://stackoverflow.com/questions/13535947/unary-operator-what-exactly-is-happening-here\ul0\cf0}}}}\b0\f0\fs22\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs36 Enhanced For loop\par
+
+\pard\sa200\sl276\slmult1\b0\fs22\par
+Java also includes another version of for loop introduced in Java 5. Enhanced for loop provides a simpler way to iterate through the elements of a collection or array. It is inflexible and should be used only when there is a need to iterate through the elements in sequential manner without knowing the index of currently processed element.\par
+Also note that the object/variable is immutable when enhanced for loop is used i.e it ensures that the values in the array can not be modified, so it can be said as read only loop where you can\rquote t update the values as opposite to other loops where values can be modified.\par
+We recommend using this form of the for statement instead of the general form whenever possible.(as per JAVA doc.)\par
+Syntax:\par
+\par
+for (T element:Collection obj/array)\par
+\{\par
+    statement(s)\par
+\}\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs40 Deductions\b0\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 This foreach loop is faster because the local variable that stores the value of the element in the array is faster to access than an element in the array.\par
+{\pntext\f2\'B7\tab}The forloop is faster than the foreach loop if the array must only be accessed once per iteration.\par
+
+\pard\sa200\sl276\slmult1\qc\fs36 Java forEach loop(method())\fs22\par
+
+\pard\sa200\sl276\slmult1 Java provides a new method forEach() to iterate the elements. It is defined in Iterable and Stream interface. It is a default method defined in the Iterable interface. Collection classes which extends Iterable interface can use forEach loop to iterate elements.\par
+\par
+This method takes a single parameter which is a functional interface. So, you can pass lambda expression as an argument.\par
+\par
+forEach() Signature in Iterable Interface\par
+default void forEach(Consumer<super T>action)  \par
+
+\pard\sa200\sl276\slmult1\qc\b\fs40 For..IN\par
+
+\pard\sa200\sl276\slmult1\b0\fs22 for...in is used to iterate over the enumerable properties of objects. Every property in an object will have an Enumerable value \f1\emdash  if that value is set to true, then the property is Enumerable.\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs36 You can define local classes (classes within methods) \par
+
+\pard\sa200\sl276\slmult1\b0\fs32 3.11.2. Restrictions on Local Classes\par
+\fs22\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Local classes are subject to the following restrictions:\par
+{\pntext\f2\'B7\tab}A local class is visible only within the block that defines it; it can never be used outside that block.\par
+{\pntext\f2\'B7\tab}Local classes cannot be declared public, protected, private, or static. These modifiers are for members of classes; they are not allowed with local variable declarations or local class declarations.\par
+{\pntext\f2\'B7\tab}Like member classes, and for the same reasons, local classes cannot contain static fields, methods, or classes. The only exception is for constants that are declared both static and final.\par
+{\pntext\f2\'B7\tab}Interfaces cannot be defined locally.\par
+{\pntext\f2\'B7\tab}A local class, like a member class, cannot have the same name as any of its enclosing classes.\par
+{\pntext\f2\'B7\tab}As noted earlier, a local class can use the local variables, method parameters, and even exception parameters that are in its scope, but only if those variables or parameters are declared final. This is because the lifetime of an instance of a local class can be much longer than the execution of the method in which the class is defined. For this reason, a local class must have a private internal copy of all local variables it uses (these copies are automatically generated by the compiler). The only way to ensure that the local variable and the private copy are always the same is to insist that the local variable is final.\par
+
+\pard\sa200\sl276\slmult1\qc\b\f0\fs36\par
+}
+ 
